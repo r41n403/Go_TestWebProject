@@ -1,0 +1,16 @@
+[Unit]
+Description=Start Go Web App
+
+[Service]
+Type=simple
+ExecStart=/home/ec2-user/hello
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+# To install/enable on boot:
+# sudo vim /etc/systemd/system/hello.service
+# sudo systemctl daemon-reload
+# sudo systemctl enable hello.service
+# sudo systemctl start hello.service
